@@ -140,8 +140,8 @@ if __name__ == "__main__":
 
     # Setup API Connection
     api_connector = TMAPIConnector(
-        ubisoft_email=os.environ["ubisoft_email"],
-        ubisoft_password=os.environ["ubisoft_password"],
+        ubisoft_email=os.environ["UBISOFT_EMAIL"],
+        ubisoft_password=os.environ["UBISOFT_PASSWORD"],
         app_name="Easiest Campaign AT Investigation",
     )
 
@@ -180,4 +180,4 @@ if __name__ == "__main__":
         inplace=True,
     )
     df["Completed"] = False
-    df.to_csv("campaign_data.csv", index=False)
+    df.to_csv("data/campaign_data.csv", index=False)
